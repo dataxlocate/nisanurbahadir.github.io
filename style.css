@@ -49,8 +49,8 @@ body {
 /* Dil seçici profil resmin sağ üst köşesinde */
 .lang-switcher {
   position: absolute;
-  top: -20px;
-  right: -20px; /* Sağ köşe */
+  top: 0;               /* Profilin hemen üstünde olacak */
+  right: 0;             /* Sağda hizalı */
   display: flex;
   gap: 10px;
   z-index: 10;
@@ -160,21 +160,20 @@ a:hover {
 
 h2 {
   transition: font-size 0.3s ease;
-  font-size: 2rem; /* orijinal boyut */
+  font-size: 2rem;
 }
 
 h2.animate-scale {
-  font-size: 2.4rem; /* büyümüş boyut */
+  font-size: 2.4rem;
 }
 
 /* Medya sorguları ile responsive tasarım */
 @media (max-width: 768px) {
   .container {
-    padding: 20px 15px; /* Küçük ekranlar için daha dar padding */
-    max-width: 100%; /* Küçük ekranlarda container genişliğini %100 yap */
+    padding: 20px 15px;
+    max-width: 100%;
   }
 
-  /* Profil resmi ve dil seçici hizalamaları */
   .profile-wrapper {
     display: flex;
     justify-content: center;
@@ -187,9 +186,9 @@ h2.animate-scale {
   }
 
   .lang-switcher {
-    top: -10px;
-    right: -10px; /* Dil seçici daha yakın */
-    flex-direction: row; /* Bayraklar yan yana */
+    top: 10px;
+    right: 10px;
+    flex-direction: row; /* Bayrakları yan yana hizala */
   }
 
   .lang-switcher button {
@@ -204,11 +203,11 @@ h2.animate-scale {
 
 @media (max-width: 480px) {
   body {
-    padding: 10px; /* Daha küçük ekranlarda daha az padding */
+    padding: 10px;
   }
 
   .container {
-    padding: 15px; /* Küçük ekranlarda container padding */
+    padding: 15px;
   }
 
   .profile-img {
@@ -217,8 +216,8 @@ h2.animate-scale {
   }
 
   .lang-switcher {
-    top: -5px;
-    right: -5px;
+    top: 5px;
+    right: 5px;
   }
 
   .lang-switcher img {
