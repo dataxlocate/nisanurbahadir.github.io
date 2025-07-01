@@ -225,3 +225,52 @@ h2.animate-scale {
     height: 12px;
   }
 }
+
+
+/* Telefon için özelleştirilmiş medya sorguları */
+@media (max-width: 768px) {
+  .profile-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  /* Profil resminin boyutunu küçük ekranlarda ayarlıyoruz */
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Dil seçici, profil resminin üst kısmında, tam ortada olacak şekilde */
+  .lang-switcher {
+    position: absolute;
+    top: 5px;        /* Profil resminin üst kısmına */
+    right: 5px;      /* Sağda, çok yakın olmalı */
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  .lang-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .lang-switcher img {
+    width: 24px;
+    height: 16px;
+    border: 1px solid #444;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Bayrakların üzerine gelindiğinde büyümesini sağlamak */
+  .lang-switcher button:hover img {
+    transform: scale(1.3);
+  }
+}
+
