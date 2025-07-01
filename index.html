@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
@@ -16,17 +16,20 @@
   <div class="container">
     <div class="profile-wrapper">
       <img src="profil.jpg" alt="Nisanur Bahadır" class="profile-img" />
+      <div class="lang-switcher" aria-label="Dil seçici">
+        <button aria-label="Türkçe" onclick="setLanguage('tr')">
+          <img src="tr.png" alt="Türk Bayrağı" />
+        </button>
+        <button aria-label="English" onclick="setLanguage('en')">
+          <img src="us.png" alt="ABD Bayrağı" />
+        </button>
+      </div>
     </div>
 
     <h1 data-tr="Nisanur Bahadır" data-en="Nisanur Bahadır">Nisanur Bahadır</h1>
     <p data-tr="Yazılım Geliştirici | Bilgisayar Programcısı" data-en="Software Developer | Computer Programmer">
-      Yazılım Geliştirici | Computer Programmer
+      Yazılım Geliştirici | Bilgisayar Programcısı
     </p>
-
-    </div>
-
-  <h1 data-i18n="title">Hoş geldiniz</h1>
-  <p data-i18n="description">Bu basit bir çok dilli site örneğidir.</p>
 
     <div class="social-icons">
          <a href="https://linkedin.com/in/nisanurbahadır" target="_blank" aria-label="LinkedIn">
@@ -136,6 +139,17 @@
 
   
  <script>
+  function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    const elements = document.querySelectorAll('[data-tr][data-en]');
+    elements.forEach(el => {
+      el.innerHTML = el.getAttribute('data-' + lang); // Burayı innerHTML yaptık
+    });
+  }
+  // Sayfa açıldığında varsayılan dil Türkçe
+  setLanguage('tr');
+
+
 
   document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', event => {
