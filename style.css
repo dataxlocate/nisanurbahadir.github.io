@@ -232,3 +232,13 @@ a:hover {
     height: 12px;
   }
 }
+
+
+.language-selector {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 8px 12px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
