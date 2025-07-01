@@ -22,17 +22,6 @@
     <p data-tr="Yazılım Geliştirici | Bilgisayar Programcısı" data-en="Software Developer | Computer Programmer">
       Yazılım Geliştirici | Computer Programmer
     </p>
-    
-   <div class="language-selector">
-        <button onclick="setLanguage('tr')">
-    <img src="tr.png" alt="Türk Bayrağı" style="width: 20px; height: 14px; vertical-align: middle; margin-right: 5px;">
-    Türkçe
-        </button>
-
-         <button onclick="setLanguage('en')">
-      <img src="us.png" alt="English Flag" style="width: 20px; height: 14px; vertical-align: middle; margin-right: 5px;">
-      English
-        </button>
 
     </div>
 
@@ -147,28 +136,6 @@
 
   
  <script>
-  const translations = {
-      tr: {
-        title: "Hoş geldiniz",
-        description: "Bu basit bir çok dilli site örneğidir."
-      },
-      en: {
-        title: "Welcome",
-        description: "This is a simple multilingual website example."
-      }
-    };
-
-    function setLanguage(lang) {
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        el.textContent = translations[lang][key];
-      });
-    }
-
-    // Sayfa açıldığında varsayılan dil
-    window.onload = () => setLanguage("tr");
-
-
 
   document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', event => {
