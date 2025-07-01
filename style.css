@@ -48,9 +48,9 @@ body {
 
 /* Dil seçici profil resmin sağ üst köşesinde */
 .lang-switcher {
+  
   top: -20px;       /* Profili biraz içine alacak şekilde */
   right: -360px;     /* Sağ üst köşe için */
-  display: flex;
   gap: 10px;
   z-index: 10;
 }
