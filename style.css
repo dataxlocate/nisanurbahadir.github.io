@@ -274,3 +274,14 @@ h2.animate-scale {
   }
 }
 
+@media (max-width: 768px) {
+  .lang-switcher {
+    position: static !important; /* Absolute'dan çıkar, normal akışa al */
+    display: flex !important;
+    justify-content: center !important; /* Ortala */
+    margin-top: 10px; /* Profil resmin altına alabilirsin */
+    gap: 10px !important;
+    right: auto !important;
+    top: auto !important;
+  }
+}
