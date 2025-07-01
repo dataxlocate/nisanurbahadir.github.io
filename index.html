@@ -127,19 +127,39 @@
     </li>
     </ul>
    </section>
+
+    <div class="language-selector">
+    <button onclick="setLanguage('tr')">Türkçe</button>
+    <button onclick="setLanguage('en')">English</button>
+  </div>
+
+  <h1 data-i18n="title">Hoş geldiniz</h1>
+  <p data-i18n="description">Bu basit bir çok dilli site örneğidir.</p>
+
   </div>
 
   
  <script>
-  function setLanguage(lang) {
-    document.documentElement.lang = lang;
-    const elements = document.querySelectorAll('[data-tr][data-en]');
-    elements.forEach(el => {
-      el.innerHTML = el.getAttribute('data-' + lang); // Burayı innerHTML yaptık
-    });
-  }
-  // Sayfa açıldığında varsayılan dil Türkçe
-  setLanguage('tr');
+  const translations = {
+      tr: {
+        title: "Hoş geldiniz",
+        description: "Bu basit bir çok dilli site örneğidir."
+      },
+      en: {
+        title: "Welcome",
+        description: "This is a simple multilingual website example."
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        el.textContent = translations[lang][key];
+      });
+    }
+
+    // Sayfa açıldığında varsayılan dil (Türkçe) ayarlanır
+    window.onload = () => setLanguage("tr");
 
 
 
