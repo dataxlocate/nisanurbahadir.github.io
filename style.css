@@ -1,169 +1,155 @@
-/* Genel stil */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* style.css */
 
 body {
-  background-color: #000;
-  font-family: 'Segoe UI', sans-serif;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
-  position: relative;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  background-color: #111;
-  border: 2px solid #444;
-  border-radius: 12px;
-  padding: 40px 30px;
-  max-width: 900px; /* Eski 500px'den 900px'e çıkardım */
-  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
   text-align: center;
-  box-shadow: 0 0 25px rgba(0, 188, 212, 0.1);
-  position: relative;
-  z-index: 1;
-}
-
-/* Profil resim ve dil seçici kapsayıcı */
-.profile-wrapper {
-  position: relative;
-  display: inline-block; /* Profil resmin boyutuna göre davranır */
-  margin-bottom: 20px;
-}
-
-.profile-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #00bcd4;
-  display: block;
-}
-
-/* Dil seçici profil resmin sağ üst köşesinde */
-.lang-switcher {
-  position: absolute;
-  top: -20px;       /* Profili biraz içine alacak şekilde */
-  right: -360px;     /* Sağ üst köşe için */
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.lang-switcher button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.lang-switcher img {
-  width: 24px;
-  height: 16px;
-  border: 1px solid #444;
-  border-radius: 3px;
-  transition: transform 0.3s ease;
-}
-
-.lang-switcher button:hover img {
-  transform: scale(1.3);
+  margin-bottom: 40px;
 }
 
 h1 {
-  font-size: 32px;
-  color: #00bcd4;
-  margin-bottom: 8px;
+  font-size: 36px;
+  color: #333;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  color: #333;
 }
 
 p {
-  color: #ccc;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888;
+}
+
+.profile-wrapper {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: -360px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding-left: 0;
+}
+
+nav li {
+  font-weight: bold;
 }
 
 .social-icons {
   display: flex;
+  gap: 10px;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-.social-icons a {
-  color: #00bcd4;
-  font-size: 24px;
-  transition: transform 0.3s;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
 
-.social-icons a:hover {
-  color: #fff;
-  transform: scale(1.1);
-}
+  .container {
+    padding: 20px 15px;
+  }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
+  h1 {
+    font-size: 26px;
+  }
 
-nav a {
-  text-decoration: none;
-  color: #00bcd4;
-  font-weight: bold;
-  transition: 0.3s;
-}
+  h2 {
+    font-size: 20px;
+  }
 
-nav a:hover {
-  color: #fff;
-}
+  .profile-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 
-section {
-  text-align: left;
-  margin-top: 30px;
-}
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
 
-section h2 {
-  font-size: 22px;
-  color: #00bcd4;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #444;
-  padding-bottom: 5px;
-}
+  .lang-switcher {
+    position: static;
+    justify-content: center;
+    margin-top: 10px;
+  }
 
-section p,
-section ul {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #ccc;
-}
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-section ul {
-  list-style: square inside;
-}
+  nav li {
+    margin-bottom: 10px;
+  }
 
-a {
-    color: #66B2FF;
-    text-decoration: underline;
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
-
-a:hover {
-    color: #3399FF;
-}
-
-h2 {
-  transition: font-size 0.3s ease;
-  font-size: 2rem; /* orijinal boyut */
-}
-
-h2.animate-scale {
-  font-size: 2.4rem; /* büyümüş boyut */
-}
-
