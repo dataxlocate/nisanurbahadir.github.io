@@ -140,21 +140,9 @@
 
   
  <script>
-  function setLanguage(lang) {
-    document.documentElement.lang = lang;
-    const elements = document.querySelectorAll('[data-tr][data-en]');
-    elements.forEach(el => {
-      el.innerHTML = el.getAttribute('data-' + lang); // Burayı innerHTML yaptık
-    });
-  }
-  // Sayfa açıldığında varsayılan dil Türkçe
-  setLanguage('tr');
-
-
-
+   
   document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', event => {
-    // Normalde sayfa içi bağlantı scroll yapacak, bunu engellemeden animasyon yapalım:
     const href = link.getAttribute('href');
     if (href && href.startsWith('#')) {
       const targetId = href.slice(1);
@@ -162,10 +150,7 @@
       if (targetSection) {
         const h2 = targetSection.querySelector('h2');
         if (h2) {
-          // Sınıfı ekle
           h2.classList.add('animate-scale');
-
-          // 300ms sonra kaldır
           setTimeout(() => {
             h2.classList.remove('animate-scale');
           }, 300);
