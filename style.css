@@ -1,3 +1,4 @@
+/* Global stil */
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +41,7 @@ body {
   object-fit: cover;
   border: 4px solid #00bcd4;
   display: block;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 h1 {
@@ -65,7 +66,7 @@ p {
 .social-icons a {
   color: #00bcd4;
   font-size: 24px;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Yumuşak geçiş */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
@@ -104,7 +105,7 @@ section h2 {
   margin-bottom: 10px;
   border-bottom: 1px solid #444;
   padding-bottom: 5px;
-  transition: font-size 0.3s ease-in-out; 
+  transition: font-size 0.3s ease-in-out;
 }
 
 section h2.animate-scale {
@@ -131,6 +132,9 @@ a:hover {
   color: #3399FF;
 }
 
+/* Responsive Tasarım */
+
+/* Tablet ve altı */
 @media (max-width: 768px) {
   body {
     padding: 15px;
@@ -152,9 +156,10 @@ a:hover {
   .profile-img {
     width: 120px;
     height: 120px;
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
+  }
 }
 
+/* Telefonlar */
 @media (max-width: 480px) {
   body {
     padding: 10px;
@@ -167,7 +172,6 @@ a:hover {
   .profile-img {
     width: 100px;
     height: 100px;
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
   }
 
   button {
