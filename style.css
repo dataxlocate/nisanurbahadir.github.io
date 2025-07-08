@@ -1,3 +1,4 @@
+/* Global stil */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +28,9 @@ body {
   box-shadow: 0 0 25px rgba(0, 188, 212, 0.1);
 }
 
+/* Profil alanı */
 .profile-wrapper {
+  position: relative;
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -39,6 +42,7 @@ body {
   object-fit: cover;
   border: 4px solid #00bcd4;
   display: block;
+  transition: transform 0.3s ease-in-out; /* Profil resminin büyüme animasyonu */
 }
 
 h1 {
@@ -63,7 +67,7 @@ p {
 .social-icons a {
   color: #00bcd4;
   font-size: 24px;
-  transition: color 0.3s, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Yumuşak geçiş */
 }
 
 .social-icons a:hover {
@@ -84,13 +88,14 @@ nav a {
   text-decoration: none;
   color: #00bcd4;
   font-weight: bold;
-  transition: 0.3s;
+  transition: color 0.3s ease-in-out; /* Yumuşak renk geçişi */
 }
 
 nav a:hover {
   color: #fff;
 }
 
+/* Bölüm başlıkları */
 section {
   text-align: left;
   margin-top: 30px;
@@ -102,7 +107,7 @@ section h2 {
   margin-bottom: 10px;
   border-bottom: 1px solid #444;
   padding-bottom: 5px;
-  transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease-in-out; /* Başlık büyüme animasyonu */
 }
 
 section h2.animate-scale {
@@ -153,7 +158,9 @@ a:hover {
   .profile-img {
     width: 120px;
     height: 120px;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out; /* Resim boyut değişimi */
   }
+}
 
 /* Telefonlar */
 @media (max-width: 480px) {
@@ -168,14 +175,16 @@ a:hover {
   .profile-img {
     width: 100px;
     height: 100px;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out; /* Resim boyut değişimi */
   }
 
-button {
-  margin-right: 10px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
+  button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
 
-#hakkimda p {
-  display: block;
+  #hakkimda p {
+    display: block;
+  }
 }
