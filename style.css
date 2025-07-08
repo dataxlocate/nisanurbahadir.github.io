@@ -64,7 +64,7 @@ p {
 .social-icons a {
   color: #00bcd4;
   font-size: 24px;
-  transition: transform 0.3s;
+  transition: color 0.3s, transform 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
